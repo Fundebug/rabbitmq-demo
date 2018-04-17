@@ -1,0 +1,17 @@
+{
+  "name": "rabbitmq-demo",
+  "version": "1.0.0",
+  "description": "RabbitMQ入门教程",
+  "main": "receiver.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rabbitmq"
+  ],
+  "author": "kiwenlau",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.5.2"
+  }
+}
