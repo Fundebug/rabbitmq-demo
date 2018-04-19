@@ -7,7 +7,11 @@ async function sendMessage(message)
     const connection = await amqp.connect("amqp://localhost");
     const channel = await connection.createChannel();
     await channel.assertQueue(queue);
-    await channel.sendToQueue(queue, new Buffer(message));
+    await channel.sendToQueue(queue, new Buffer(message),
+    {
+        // RabbitMQ重启时，消息会被保存到磁盘
+        persistent: true
+    });
 }
 
 
